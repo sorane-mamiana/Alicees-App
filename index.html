@@ -3,49 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>seisan（精算アプリ）</title>
+  <title>Alicees App</title>
   <style>
-    body { font-family: -apple-system, sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; color: #333; line-height: 1.7; }
-    h1 { font-size: 2em; margin-bottom: 8px; }
-    h2 { margin-top: 40px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
-    ul { padding-left: 1.5em; }
-    .badge { display: inline-block; background: #000; color: #fff; padding: 4px 12px; border-radius: 6px; font-size: 0.85em; margin-top: 4px; }
-    footer { margin-top: 60px; font-size: 0.85em; color: #999; border-top: 1px solid #eee; padding-top: 20px; }
-    a { color: #0066cc; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: #0d0d0d; color: #f0f0f0; line-height: 1.7; }
+    header { padding: 60px 40px 40px; border-bottom: 1px solid #222; }
+    header h1 { font-size: 2.4em; font-weight: 700; letter-spacing: -0.5px; }
+    header p { margin-top: 8px; color: #888; font-size: 1.05em; }
+    .apps { max-width: 900px; margin: 60px auto; padding: 0 40px; }
+    .apps h2 { font-size: 1.1em; color: #666; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 32px; }
+    .app-card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 16px; padding: 32px; margin-bottom: 24px; }
+    .app-card h3 { font-size: 1.4em; margin-bottom: 8px; }
+    .app-card p { color: #aaa; margin-bottom: 16px; }
+    .tag { display: inline-block; background: #2a2a2a; color: #aaa; padding: 3px 10px; border-radius: 20px; font-size: 0.8em; margin-right: 6px; }
+    footer { text-align: center; padding: 40px; color: #444; font-size: 0.85em; border-top: 1px solid #1a1a1a; }
+    footer a { color: #666; text-decoration: none; }
+    footer a:hover { color: #aaa; }
   </style>
 </head>
 <body>
-  <h1>seisan</h1>
-  <p>社内経費精算を効率化するiOSアプリです。レシートをカメラで撮影するだけで、AIが自動で内容を読み取り、Google スプレッドシートに経費データを記録します。</p>
+  <header>
+    <h1>Alicees App</h1>
+    <p>業務を効率化するiOSアプリを開発しています。</p>
+  </header>
 
-  <h2>アプリの目的</h2>
-  <p>seisan は以下の目的で Google アカウントおよび Google API を使用します。</p>
-  <ul>
-    <li><strong>Google Sign-In</strong>：ユーザー認証のために使用。取得する情報はお名前とメールアドレスのみ</li>
-    <li><strong>Google Sheets API</strong>：経費データ（日付・金額・支払先・勘定科目・支払方法・備考）をユーザーが指定したスプレッドシートに書き込むために使用</li>
-    <li><strong>Google Drive API（drive.metadata.readonly）</strong>：ユーザーのGoogle ドライブに存在するスプレッドシートのファイル名とIDの一覧を取得し、送信先スプレッドシートの選択を容易にするために使用。ファイルの内容は一切取得しません</li>
-  </ul>
+  <div class="apps">
+    <h2>Apps</h2>
 
-  <h2>主な機能</h2>
-  <ul>
-    <li>AIレシート解析：カメラで撮影したレシートをAIが自動で読み取り</li>
-    <li>複数枚一括処理：複数のレシートをまとめて解析・送信</li>
-    <li>Googleスプレッドシート連携：経費データを直接スプレッドシートに記録</li>
-    <li>Googleドライブ連携：使用するスプレッドシートをドライブから簡単に選択</li>
-  </ul>
+    <div class="app-card">
+      <h3>seisan（精算アプリ）</h3>
+      <p>レシートをカメラで撮影するだけで、AIが自動で内容を読み取り、Google スプレッドシートに経費データを記録するiOSアプリです。</p>
+      <span class="tag">iOS</span>
+      <span class="tag">Google Sheets</span>
+      <span class="tag">AI OCR</span>
+    </div>
+  </div>
 
-  <h2>対応環境</h2>
-  <ul>
-    <li>iOS 17.0 以上</li>
-    <li>Google アカウントが必要です</li>
-  </ul>
-
-  <h2>プライバシーポリシー</h2>
-  <p><a href="./privacy.html">プライバシーポリシーはこちら</a></p>
-
-  <h2>お問い合わせ</h2>
-  <p>e.fujii262@gmail.com</p>
-
-  <footer>© 2026 藤井瑛亮</footer>
+  <footer>
+    © 2026 Alicees App &nbsp;|&nbsp;
+    <a href="./privacy.html">プライバシーポリシー</a> &nbsp;|&nbsp;
+    e.fujii262@gmail.com
+  </footer>
 </body>
 </html>
